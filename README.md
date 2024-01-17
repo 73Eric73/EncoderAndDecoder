@@ -1,5 +1,5 @@
-Encoder And Decoder 🖥️
-=======================
+Encoder  And  Decoder 🖥️
+===========================
 A Encoder with the respective Decoder in Java
 ---------------------------------------------
 This program is a encoder that converts your text into binary.  
