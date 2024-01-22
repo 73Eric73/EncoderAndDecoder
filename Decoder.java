@@ -1,6 +1,7 @@
 public class Decoder {
 
     public static void Decode(String encodeInput) {
+        
         try {
 
             StringBuilder binaryCode = new StringBuilder();
@@ -16,9 +17,7 @@ public class Decoder {
             }
 
             for (int i = 0; i < x.length - 1; i++) {
-
                 if (i == 0) {
-
                     if (x[i].equals("0")) {
                         binaryCode.append("1".repeat(x[i + 1].length()));
                         i++;
@@ -26,9 +25,7 @@ public class Decoder {
                         binaryCode.append("0".repeat(x[i + 1].length()));
                         i++;
                     }
-
                 } else {
-
                     if (x[i].equals("0")) {
                         binaryCode.append("1".repeat(x[i + 1].length()));
                         i++;
@@ -37,9 +34,10 @@ public class Decoder {
                         i++;
                     }
                 }
-
             }
+            
             BinaryToDecimal(binaryCode.toString());
+            
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -72,18 +70,22 @@ public class Decoder {
         }
 
         try {
+            
             for (double v : decimalNumber) {
                 if (v < 32 || v > 122) {
                     throw new Exception("Encoded string is not valid.");
                 }
             }
+            
             System.out.println("Decoded string:");
+            
             for (double v : decimalNumber) {
                 char x = (char) v;
-
                 System.out.print(Character.valueOf(x));
             }
+            
             System.out.println();
+            
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
