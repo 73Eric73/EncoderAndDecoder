@@ -1,10 +1,10 @@
 public class Encoder {
 
-    protected static StringBuilder userInput = new StringBuilder();
-    protected static StringBuilder binaryMessage = new StringBuilder();
-    protected static StringBuilder encodeMessage = new StringBuilder();
-
     public static String Encode(String codeUser) {
+
+        StringBuilder userInput = new StringBuilder();
+        StringBuilder binaryMessage = new StringBuilder();
+        StringBuilder encodeMessage = new StringBuilder();
 
         userInput.append(codeUser);
 
